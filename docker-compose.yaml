@@ -1,0 +1,7 @@
+hub:
+  build: .
+  ports:
+    - "9090:8080"
+  environment:
+    - FIRST = "Clint"
+    - LAST=PEDERSEN
