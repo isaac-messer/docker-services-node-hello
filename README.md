@@ -1,11 +1,21 @@
 # node-hello-world
-Simple hello world node app.
+Docker Build Command: 
+    $> docker build -t node-hello-world:latest
 
-## Build
-1. Build the image:
-   * `docker build -t node-hello-world:latest .`
-2. Run the image:
-   * `docker run -d --name node-hello-world -p 8080:8080 node-hello-world:latest`
-3. Test:
-   * Browse to http://localhost:8080 in your favorite browser.
-4. Can you change the port inside the docker image to `5050`?
+Docker Run Command:
+    $> docker run --rm --name dockerpractice 8080:8080 node-hello-world:latest
+
+Docker Stack Deploy Command:
+    $> docker stack deploy -c docker-compose.yaml node-hello-world 
+
+Scale Out First Service Command:
+   $> docker service scale node-hello-world_myhttps=7
+
+Delete Containers Command:
+   $> docker stop <Container-id>
+
+Remove Stack Command: 
+   $> docker stack rm node-hello-world
+
+Application URL:
+    localhost:8080

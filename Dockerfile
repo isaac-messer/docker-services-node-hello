@@ -1,6 +1,6 @@
 FROM node:carbon
 
-MAINTAINER Clint Pedersen <clint.pedersen@gmail.com>
+LABEL MAINTAINER = 'Clint Pedersen <clint.pedersen@gmail.com>'
 
 WORKDIR /usr/src/app
 

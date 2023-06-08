@@ -1,7 +1,14 @@
-hub:
-  build: .
-  ports:
-    - "9090:8080"
-  environment:
-    - FIRST = "Clint"
-    - LAST=PEDERSEN
+version: '3.8'
+services:
+  mywebsite:
+    image: node-hello-world:latest
+    ports:
+      - 3000:8000
+    deploy:
+      replicas: 3
+  myhttps:
+    image: node-hello-world:latest
+    ports:
+      - 3001:8001
+    deploy:
+      replicas: 2
